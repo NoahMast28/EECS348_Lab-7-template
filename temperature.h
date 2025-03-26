@@ -35,4 +35,27 @@ float celsius_to_kelvin(float celsius);
  */
 float kelvin_to_celsius(float celsius);
 
+/**
+ * @brief Convert temperature in Fahrenheit to Kelvin
+ * 
+ * @param fahrenheit
+ * @return float
+ */
+ float fahrenheit_to_kelvin(float fahrenheit);
+
+ /**
+  * @brief Convert temperature in Kelvin to Fahrenheit
+  * 
+  * @param kelvin
+  * @return float
+  */
+ float kelvin_to_fahrenheit(float kelvin);
+ 
+ /**
+  * @brief Categorize temperature into predefined ranges
+  * 
+  * @param celsius
+  */
+ void categorize_temperature(float celsius);
+
 #endif /* __REPORT_H__ */
