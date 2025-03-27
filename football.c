@@ -40,4 +40,6 @@ void print_combinations(int points) {
             }
         }
     }
+
+    printf("\n"); // Prints new line for formatting
 }

@@ -11,18 +11,21 @@ int main() {
 
         // Prints an error if the user does not input an integer or if their integer is negative
         if (scanf("%d", &points) != 1 || points < 0) {
-            printf("Invalid input. Enter a nonnegative integer.\n");
-            return 1;
+            printf("Invalid input. Enter a nonnegative integer.\n\n");
+
+            while (getchar() != '\n');
         }
 
         // Exits the loop if the user entered 0 or 1
-        if (points == 0 || points == 1) {
+        else if (points == 0 || points == 1) {
             break;
         }
 
         // Prints the total number of combinations and the combinations
-        printf("Total combinations: %d\n", count_combinations(combinations));
-        print_combinations(points);
+        else {
+            printf("Total combinations: %d\n", count_combinations(points));
+            print_combinations(points);
+        }
     }
     
     return 0;
