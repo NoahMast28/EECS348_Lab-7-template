@@ -13,7 +13,7 @@ int main() {
         if (scanf("%d", &points) != 1 || points < 0) {
             printf("Invalid input. Enter a nonnegative integer.\n\n");
 
-            while (getchar() != '\n');
+            while (getchar() != '\n'); // Clears input buffer
         }
 
         // Exits the loop if the user entered 0 or 1
