@@ -12,14 +12,16 @@ int main() {
         printf("Invalid input. Please enter a floating point value.\n");
         return 1;
     }
+    while (getchar() != '\n'); // Clears input buffer
 
     // Gets the input scale from the user
     printf("Enter the input scale: ");
-    scanf("%c", input_scale);
+    scanf("%c", &input_scale);
+    while (getchar() != '\n'); // Clears input buffer
 
     // Gets the target scale from the user
     printf("Enter the target scale: ");
-    scanf("%c", target_scale);
+    scanf("%c", &target_scale);
 
     float converted_temperature; // Initializes converted_temperature
 
@@ -29,7 +31,7 @@ int main() {
             converted_temperature = celsius_to_fahrenheit(temperature);
         } else if (target_scale == 'K' || target_scale == 'k') {
             converted_temperature = celsius_to_kelvin(temperature);
-        } else if {
+        } else if (target_scale == 'C' || target_scale == 'c') {
             converted_temperature = temperature;
         } else {
             printf("Invalid target temperature scale.\n");
@@ -43,7 +45,7 @@ int main() {
             converted_temperature = fahrenheit_to_celsius(temperature);
         } else if (target_scale == 'K' || target_scale == 'k') {
             converted_temperature = fahrenheit_to_kelvin(temperature);
-        } else if {
+        } else if (target_scale == 'F' || target_scale == 'f') {
             converted_temperature = temperature;
         } else {
             printf("Invalid target temperature scale.\n");
@@ -57,7 +59,7 @@ int main() {
             converted_temperature = kelvin_to_fahrenheit(temperature);
         } else if (target_scale == 'C' || target_scale == 'c') {
             converted_temperature = kelvin_to_celsius(temperature);
-        } else if {
+        } else if (target_scale == 'K' || target_scale == 'k') {
             converted_temperature = temperature;
         } else {
             printf("Invalid target temperature scale.\n");

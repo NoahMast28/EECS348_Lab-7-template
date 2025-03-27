@@ -22,7 +22,7 @@ float kelvin_to_celsius(float kelvin) {
     // Checks if the temperate is negative
     if (kelvin < 0) {
         printf("Error: Kelvin temperatures cannot be negative\n");
-        return -1 // Returns an error value of -1
+        return -1; // Returns an error value of -1
     }
 
     return kelvin - 273.15;
@@ -39,7 +39,7 @@ float kelvin_to_fahrenheit(float kelvin) {
 }
 
 // Prints a category and message based on the temperature given
-void categorize_temperature(float_celsius) {
+void categorize_temperature(float celsius) {
     if (celsius < 0) {
         printf("Category: Freezing - Wear winter gear.\n");
     } else if (celsius < 10) {
